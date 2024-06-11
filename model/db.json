@@ -1,0 +1,44 @@
+{
+  "artists": [{
+    "name": "Kassmasse",
+    "quote": "ላምጪው ይከፈላል",
+    "profileImage": "/img/Artists/kassmasse.jpg",
+    "coverImage": "/img/artist-cover/kassmasse-cover.jpg",
+    "biography": "biography will be added soon"
+  },
+  {
+    "name": "Uno",
+    "quote": "U-N-O",
+    "profileImage": "/img/Artists/uno.jpg",
+    "coverImage": "/img/artist-cover/uno-cover.jpg",
+    "biography": "biography will be added soon"
+  },
+  {
+    "name": "Jemberu Demeke",
+    "quote": "ጋሜ አይፈራም",
+    "profileImage": "/img/Artists/jd.jpg",
+    "coverImage": "/img/artist-cover/jd-cover.jpg",
+    "biography": "biography will be added soon"
+  },
+  {
+    "name": "Wegdayit",
+    "quote": "እኔ ደሞ ዚቀኛ...",
+    "profileImage": "/img/Artists/wegdayit.jpg",
+    "coverImage": "/img/artist-cover/wegdayit-cover.jpg",
+    "biography": "biography will be added soon"
+  },
+  {
+    "name": "Laeke",
+    "quote": "እውነቱ ግልጽ ነው...",
+    "profileImage": "/img/Artists/laeke.jpg",
+    "coverImage": "/img/artist-cover/laeke-cover.jpg",
+    "biography": "biography will be added soon"
+  },
+  {
+    "name": "Dagmawit Ameha",
+    "quote": "soon...",
+    "profileImage": "/img/Artists/dagi.jpg",
+    "coverImage": "/img/artist-cover/dagi-cover.jpg",
+    "biography": "biography will be added soon"
+  }]
+}
