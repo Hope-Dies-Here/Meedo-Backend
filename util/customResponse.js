@@ -15,7 +15,7 @@ const customResponse = {
       data: data || null
     });
   },
-  notFound: (res, error, message = "Not Found") => {
+  notFound: (res, error, message = error.message || "Not Found") => {
     res.status(404).json({
       status: 404,
       result: false,
@@ -23,9 +23,17 @@ const customResponse = {
       data: null
     });
   },
-  badRequest: (res, err, message = "Bad Request") => {
+  badRequest: (res, error, message = error.message || "Invalid Request") => {
     res.status(400).json({
       status: 400,
+      result: false,
+      message: message,
+      error: error
+    });
+  },
+  unauthorized: (res, error, message = error.message || "Unauthorized") => {
+    res.status(401).json({
+      status: 401,
       result: false,
       message: message,
       error: error

@@ -1,9 +1,6 @@
 import { artistRepositery } from '../repositery/ArtistRepositery.js'
 
 class ArtistService {
-  constructor(artistRepositery){
-    this.artistRepositery = artistRepositery;
-  }
   
   async getArtists() {
     /*
@@ -52,5 +49,5 @@ class ArtistService {
   }
 }
 
-const artistService = new ArtistService(artistRepositery)
+const artistService = new ArtistService()
 export { artistService }

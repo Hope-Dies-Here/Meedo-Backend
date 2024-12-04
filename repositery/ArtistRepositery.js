@@ -1,9 +1,6 @@
 import { Artist } from '../model/Artist.js'
 
 class ArtistRepositery {
-  constructor(Artist){
-    this.Artist = Artist;
-  }
   
   async getArtists() {
     try {
@@ -67,6 +64,6 @@ class ArtistRepositery {
   }
 }
 
-const artistRepositery = new ArtistRepositery(Artist)
+const artistRepositery = new ArtistRepositery()
 
-export { ArtistRepositery, artistRepositery }
+export { artistRepositery }

@@ -2,12 +2,16 @@ import express from 'express'
 import dotenv from 'dotenv'
 import cors from 'cors'
 import bodyParser from 'body-parser'
+import cookieParser from 'cookie-parser'
+// file imports
 import artists from './routes/ArtistRoute.js'
 import albums from './routes/AlbumRoute.js'
 import videoClips from './routes/VideoClipRoute.js'
+import AuthRoute from './routes/AuthRoute.js'
 import artistsAdmin from './routes/admin/ArtistRouteAdmin.js'
 import albumsAdmin from './routes/admin/AlbumRouteAdmin.js'
 import videoClipsAdmin from './routes/admin/VideoClipAdminRoute.js'
+
 import { connectDatabase } from './config/dbConfig.js'
 
 dotenv.config()
@@ -17,6 +21,7 @@ const PORT = process.env.PORT || 3000
 const DB_STRING = process.env.DB_STRING
 
 app.use(cors())
+app.use(cookieParser())
 app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
@@ -32,6 +37,7 @@ connectDatabase(DB_STRING)
 app.use("/api/artists/", artists)
 app.use("/api/albums/", albums)
 app.use("/api/videoClips/", videoClips)
+app.use("/api/auth/", AuthRoute)
 
 // routes for admin
 app.use("/api/artists/admin/", artistsAdmin)

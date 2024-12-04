@@ -1,11 +1,9 @@
 import mongoose from "mongoose";
 
-export const Artist = mongoose.model(
-  "Artist",
-  new mongoose.Schema({
+const artistSchema = new mongoose.Schema({
     name: {
       type: String,
-      required: true
+      required: [true, 'Name is required']
     },
     quote: {
       type: String
@@ -26,4 +24,10 @@ export const Artist = mongoose.model(
       // required: true
     }
   })
-);
+
+artistSchema.pre('save', function (next) {
+  console.log("Saving artisit in progress...")
+  next()
+})
+
+export const Artist = mongoose.model( "Artist", artistSchema );
